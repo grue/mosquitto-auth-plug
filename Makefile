@@ -31,7 +31,7 @@ BE_LDFLAGS += -L/usr/lib -lldap -llber
 
 OPENSSLDIR=/usr/local/stow/openssl-1.0.0c/
 OSSLINC=-I$(OPENSSLDIR)/include
-OSSLIBS=-L$(OPENSSLDIR)/lib -lcrypto 
+OSSLIBS=-L$(OPENSSLDIR)/lib -lcrypto -lcares
 
 OBJS=auth-plug.o base64.o pbkdf2-check.o log.o hash.o be-psk.o be-cdb.o be-mysql.o be-sqlite.o be-redis.o be-postgres.o be-ldap.o
 CFLAGS = -I$(MOSQUITTO_SRC)/src/
